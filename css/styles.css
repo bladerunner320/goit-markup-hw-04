@@ -32,6 +32,8 @@ margin: 0;
 
 .header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -105,7 +107,7 @@ margin: 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    transition: color cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -115,10 +117,11 @@ margin: 0;
     background-color: #2E2F42;
     padding: 188px 0;
     background-image: 
-    linear-gradient( 
-    to bottom,
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)),
+    linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+    ),
     url(../images/people-office\ 1.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -167,7 +170,7 @@ margin: 0;
     min-width: 169px;
     background: #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-one-button:hover,
 .section-one-button:focus {
@@ -312,42 +315,37 @@ background-color: #404BBF;
 }
 
 .portfolio {
-    color: #2E2F42;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
     padding: 120px 0;
 }
 
+.portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-container {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
 .header-portfolio {
-    color: #2E2F42;
+        color: #2E2F42;
         text-align: center;
         font-size: 36px;
         font-weight: 700;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
-    margin-bottom: 72px;
+        margin-bottom: 72px;
 }
 
-.portfolio-list-item {
-    width: calc((100% - 48px) / 3);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-item:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} 
-
-.portfolio-container {
-    padding: 32px 16px;
-    border: 1px solid #E7E9FC;
-    border-top: none;
-
-}
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -360,7 +358,7 @@ background-color: #404BBF;
     overflow: hidden;
 }
 
-.portfolio-item:hover .cover-text {
+.portfolio-list-item:hover .cover-text {
     transform: translateY(0%);
 }
 
